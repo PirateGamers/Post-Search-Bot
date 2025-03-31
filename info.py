@@ -10,7 +10,7 @@ from os import environ
 API_ID       = int(environ.get("API_ID", "15829854"))
 API_HASH     = environ.get("API_HASH", "effcefa1b8fb65aa2b3210c85c75121d")
 BOT_TOKEN    = environ.get("BOT_TOKEN", "")
-DATABASE_URI = environ.get("DATABASE_URI", "")
+DATABASE_URI = environ.get("DATABASE_URI", "mongodb+srv://123:123@cluster0.nhql83l.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 LOG_CHANNEL  = int(environ.get("LOG_CHANNEL", "-1002150439610"))
 ADMIN        = int(environ.get("ADMIN", "5097048997"))
 CHANNEL      = environ.get("CHANNEL", "@TechnicalBichu")
