@@ -15,11 +15,11 @@ async def start(bot, message):
     button = [[
         InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{username}?startgroup=true')
     ],[
-        InlineKeyboardButton("ʜᴇʟᴘ", callback_data="misc_help"),
-        InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="misc_about")
+        InlineKeyboardButton("✅️ ʜᴇʟᴘ ✅️", callback_data="misc_help"),
+        InlineKeyboardButton("🔓 ᴀʙᴏᴜᴛ 🔓", callback_data="misc_about")
     ],[
-        InlineKeyboardButton("🤖 ᴜᴘᴅᴀᴛᴇ", url="https://t.me/vj_botz"),
-        InlineKeyboardButton("🔍 ɢʀᴏᴜᴘ", url="https://t.me/vj_bot_disscussion")
+        InlineKeyboardButton("🤖 ᴜᴘᴅᴀᴛᴇ 🤖", url="https://t.me/TechnicalBichu"),
+        InlineKeyboardButton("🔍 ɢʀᴏᴜᴘ 🔍", url="https://t.me/+9bU4o_3OWu00NTc1")
     ]]
     await message.reply(text=script.START.format(message.from_user.mention),
                         disable_web_page_preview=True,
@@ -61,14 +61,14 @@ async def misc(bot, update):
     if data=="home":
        username = (await bot.get_me()).username
        button = [[
-           InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{username}?startgroup=true')
-       ],[
-           InlineKeyboardButton("ʜᴇʟᴘ", callback_data="misc_help"),
-           InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="misc_about")
-       ],[
-           InlineKeyboardButton("🤖 ᴜᴘᴅᴀᴛᴇ", url="https://t.me/vj_botz"),
-           InlineKeyboardButton("🔍 ɢʀᴏᴜᴘ", url="https://t.me/vj_bot_disscussion")
-       ]]
+        InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{username}?startgroup=true')
+    ],[
+        InlineKeyboardButton("✅️ ʜᴇʟᴘ ✅️", callback_data="misc_help"),
+        InlineKeyboardButton("🔓 ᴀʙᴏᴜᴛ 🔓", callback_data="misc_about")
+    ],[
+        InlineKeyboardButton("🤖 ᴜᴘᴅᴀᴛᴇ 🤖", url="https://t.me/TechnicalBichu"),
+        InlineKeyboardButton("🔍 ɢʀᴏᴜᴘ 🔍", url="https://t.me/+9bU4o_3OWu00NTc1")
+    ]]
        await update.message.edit(text=script.START.format(update.from_user.mention),
                                  disable_web_page_preview=True,
                                  reply_markup=InlineKeyboardMarkup(button))
