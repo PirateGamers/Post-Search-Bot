@@ -1,7 +1,3 @@
-# Don't Remove Credit Tg - @VJ_Botz
-# Subscribe YouTube Channel For Amazing Bot https://youtube.com/@Tech_VJ
-# Ask Doubt on telegram @KingVJ01
-
 from utils import *
 from pyrogram import Client, filters
 from plugins.generate import database 
@@ -15,16 +11,16 @@ async def start(bot, message):
     button = [[
         InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{username}?startgroup=true')
     ],[
-        InlineKeyboardButton("✅️ ʜᴇʟᴘ ✅️", callback_data="misc_help"),
-        InlineKeyboardButton("🔓 ᴀʙᴏᴜᴛ 🔓", callback_data="misc_about")
+        InlineKeyboardButton("ʜᴇʟᴘ", callback_data="misc_help"),
+        InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="misc_about")
     ],[
-        InlineKeyboardButton("🤖 ᴜᴘᴅᴀᴛᴇ 🤖", url="https://t.me/TechnicalBichu"),
-        InlineKeyboardButton("🔍 ɢʀᴏᴜᴘ 🔍", url="https://t.me/+9bU4o_3OWu00NTc1")
+        InlineKeyboardButton("🤖 ᴜᴘᴅᴀᴛᴇ", url="https://t.me/TechnicalBichu"),
+        InlineKeyboardButton("🔍 ɢʀᴏᴜᴘ", url="https://t.me/+nTXrqJlnoTkwY2Q1")
     ]]
     await message.reply(text=script.START.format(message.from_user.mention),
                         disable_web_page_preview=True,
                         reply_markup=InlineKeyboardMarkup(button))
- 
+
 @Client.on_message(filters.command("help"))
 async def help(bot, message):
     await message.reply(text=script.HELP, 
@@ -61,14 +57,14 @@ async def misc(bot, update):
     if data=="home":
        username = (await bot.get_me()).username
        button = [[
-        InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{username}?startgroup=true')
-    ],[
-        InlineKeyboardButton("✅️ ʜᴇʟᴘ ✅️", callback_data="misc_help"),
-        InlineKeyboardButton("🔓 ᴀʙᴏᴜᴛ 🔓", callback_data="misc_about")
-    ],[
-        InlineKeyboardButton("🤖 ᴜᴘᴅᴀᴛᴇ 🤖", url="https://t.me/TechnicalBichu"),
-        InlineKeyboardButton("🔍 ɢʀᴏᴜᴘ 🔍", url="https://t.me/+9bU4o_3OWu00NTc1")
-    ]]
+           InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{username}?startgroup=true')
+       ],[
+           InlineKeyboardButton("ʜᴇʟᴘ", callback_data="misc_help"),
+           InlineKeyboardButton("ᴀʙᴏᴜᴛ", callback_data="misc_about")
+       ],[
+           InlineKeyboardButton("🤖 ᴜᴘᴅᴀᴛᴇ", url="https://t.me/TechnicalBichu"),
+           InlineKeyboardButton("🔍 ɢʀᴏᴜᴘ", url="https://t.me/+nTXrqJlnoTkwY2Q1")
+       ]]
        await update.message.edit(text=script.START.format(update.from_user.mention),
                                  disable_web_page_preview=True,
                                  reply_markup=InlineKeyboardMarkup(button))
@@ -81,4 +77,3 @@ async def misc(bot, update):
         await update.message.edit(text=script.ABOUT.format((await bot.get_me()).mention), 
                                   disable_web_page_preview=True,
                                   reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("⬅️ Back", callback_data="misc_home")]]))
-         
